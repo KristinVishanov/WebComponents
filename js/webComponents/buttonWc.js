@@ -1,11 +1,18 @@
 const templateButton = document.createElement('template');
 templateButton.innerHTML = `
 	<style>
-	h2{
-		color: green;
-	}
 	#button{
-	height: 30px;
+		color: white;
+		padding:5px 10px;
+		border: 1px solid transparent;
+		border-radius: .25rem;
+		border-color: #17a2b8;
+		opacity: 0.8;
+		background-color: #17a2b8;
+		font-family: Verdana;
+	}
+	#button:hover{
+		opacity: 1;
 	}
 	</style>
 	<button id="button">Click Me!</button>
