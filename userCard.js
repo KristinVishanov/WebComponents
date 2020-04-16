@@ -2,20 +2,20 @@ const template = document.createElement('template');
 template.innerHTML = `
 	<style>
 	h2{
-	color: green;
+		color: green;
 	}
 	.user-card{
-	width: 150px;
-	padding: 10px;
-	border: 1px solid green;
+		padding: 10px;
+		border: 1px solid green;
 	}
+
 </style>
 <div class="user-card">
 	<div>
 		<h2></h2>
 	</div>
 	<div class="info">
-		<p><slot name="email"/></p>
+		<p class="text-info"><slot name="email"/></p>
 		<p><slot name="phone"/></p>
 		<p><slot name="description"/></p>
 	</div>

@@ -4,14 +4,33 @@
     <meta charset="utf-8">
     <title>Web Components Example
     </title>
+    <script src="js/jquery-3.5.0.min.js"></script>
+    <script src="bootstrap-4.4.1/js/bootstrap.js"></script>
+    <link rel="stylesheet" href="bootstrap-4.4.1/css/bootstrap.min.css">
 </head>
 <body>
-    <h1>User card</h1>
-    <user-card name="User name">
-        <div slot="email">testUserName@abv.bg</div>
-        <div slot="phone">0899 123 456 789</div>
-        <div slot="description">description 1</div>
-    </user-card>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col-sm"></div>
+
+        <div class="col-sm-auto">
+            <div class="bg-light p-3">
+                <div class="h1 text-secondary">User card</div>
+
+                <!--    USER CARD WEB COMPONENT    -->
+                <user-card name="User name">
+                    <div slot="email">testUserName@abv.bg</div>
+                    <div slot="phone">0899 123 456 789</div>
+                    <div slot="description">description 1</div>
+                </user-card>
+
+            </div>
+        </div>
+
+        <div class="col-sm"></div>
+    </div>
+</div>
+
 
 	
 	<script src="userCard.js"></script>
