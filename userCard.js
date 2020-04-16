@@ -4,6 +4,11 @@ template.innerHTML = `
 	h2{
 	color: green;
 	}
+	.user-card{
+	width: 150px;
+	padding: 10px;
+	border: 1px solid green;
+	}
 </style>
 <div class="user-card">
 	<div>
