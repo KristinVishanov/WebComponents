@@ -1,15 +1,14 @@
-const template = document.createElement('template');
-template.innerHTML = `
+const templateUserCard = document.createElement('template');
+templateUserCard.innerHTML = `
 	<style>
-	h2{
-		color: green;
-	}
-	.user-card{
-		padding: 10px;
-		border: 1px solid green;
-	}
-
-</style>
+		h2{
+			color: green;
+		}
+		.user-card{
+			padding: 10px;
+			border: 1px solid green;
+		}
+	</style>
 <div class="user-card">
 	<div>
 		<h2></h2>
@@ -29,17 +28,15 @@ class UserCard extends HTMLElement{
 		this.showInfo = true;
 
 		this.attachShadow({mode: 'open'});
-		this.shadowRoot.appendChild(template.content.cloneNode(true));
+		this.shadowRoot.appendChild(templateUserCard.content.cloneNode(true));
         this.shadowRoot.querySelector('h2').innerHTML = this.getAttribute('name');
 	}
 
 	connectedCallback(){
-        console.log('connected');
         this.shadowRoot.querySelector('#toggle-info').addEventListener('click', ()=> this.toggleInfo())
 	}
 
 	disconnectedCallback(){
-		console.log('disconected');
         this.shadowRoot.querySelector('#toggle-info').removeEventListener()
 	}
 
@@ -57,4 +54,4 @@ class UserCard extends HTMLElement{
 	}
 }
 
-window.customElements.define('user-card', UserCard);
+window.customElements.define('user-card-wc', UserCard);

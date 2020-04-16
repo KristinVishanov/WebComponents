@@ -18,13 +18,24 @@
                 <div class="h1 text-secondary">User card</div>
 
                 <!--    USER CARD WEB COMPONENT    -->
-                <user-card name="User name">
+                <user-card-wc name="User name">
                     <div slot="email">testUserName@abv.bg</div>
                     <div slot="phone">0899 123 456 789</div>
                     <div slot="description">description 1</div>
-                </user-card>
+                </user-card-wc>
 
             </div>
+
+            <div class="bg-light p-3 mt-3">
+                <div class="h1 text-secondary">Button</div>
+
+                <!--    BUTTON    -->
+                <!--type: button, reset, submit-->
+                <button-wc title="Next" type="reset" redirectPage="test.html">
+
+                </button-wc>
+            </div>
+
         </div>
 
         <div class="col-sm"></div>
@@ -33,6 +44,7 @@
 
 
 	
-	<script src="userCard.js"></script>
+	<script src="js/webComponents/userCardWc.js"></script>
+    <script src="js/webComponents/buttonWc.js"></script>
 </body>
 </html>
